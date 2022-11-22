@@ -23,6 +23,6 @@ def check_password(password):
                 checks["digit"]=True
             else:
                 checks["special"]=True 
-        if set(list(checks.values())).pop()==True:
+        if not False in set(list(checks.values())):
             return password
     return False                                
